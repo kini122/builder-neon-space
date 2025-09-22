@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bolt, CheckCircle2, Leaf, PiggyBank, Sim, Users } from "lucide-react";
+import { Bolt, CheckCircle2, Leaf, PiggyBank, SimCard, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Counter } from "@/components/site/Counter";
 
