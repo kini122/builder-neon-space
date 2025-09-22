@@ -77,7 +77,7 @@ function Hero() {
             <div className="flex h-full items-center justify-center rounded-2xl bg-white/95">
               <div className="grid grid-cols-3 gap-6 p-6 text-accent">
                 <IconCard Icon={Users} label="Students" />
-                <IconCard Icon={Sim} label="eSIM" />
+                <IconCard Icon={SimCard} label="eSIM" />
                 <IconCard Icon={Leaf} label="100% Green" />
                 <IconCard Icon={Bolt} label="Energy" />
                 <IconCard Icon={PiggyBank} label="Savings" />
