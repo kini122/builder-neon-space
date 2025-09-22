@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { LightningBolt, Leaf, PhoneCall } from "lucide-react";
+import { Bolt, Leaf, PhoneCall } from "lucide-react";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
