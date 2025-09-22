@@ -20,7 +20,7 @@ export default function NavBar() {
       <div className="container flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary text-white shadow-brand">
-            <LightningBolt className="h-4 w-4" />
+            <Bolt className="h-4 w-4" />
           </span>
           <span className="text-xl font-bold tracking-tight text-accent group-hover:text-primary transition-colors">
             Switch Smart Save
