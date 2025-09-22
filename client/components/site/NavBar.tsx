@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Bolt, Leaf, PhoneCall } from "lucide-react";
+import { PhoneCall } from "lucide-react";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,9 +19,11 @@ export default function NavBar() {
     >
       <div className="container flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary text-white shadow-brand">
-            <Bolt className="h-4 w-4" />
-          </span>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fa975a65054c947b9ba8beddf8340c96e%2Fbf7efaedbffa48bba4c5aca76a2f0bf6?format=webp&width=120"
+            alt="Switch Smart Save Logo"
+            className="h-8 w-auto"
+          />
           <span className="text-xl font-bold tracking-tight text-accent group-hover:text-primary transition-colors">
             Switch Smart Save
           </span>
@@ -30,6 +32,8 @@ export default function NavBar() {
           <NavItem to="/" label="Home" />
           <NavItem to="/students" label="Students" />
           <NavItem to="/calculator" label="Calculator" />
+          <NavItem to="/onboarding" label="Join" />
+          <NavItem to="/portal" label="Portal" />
           <a
             href="#impact"
             className="text-foreground/80 hover:text-primary transition-colors"
