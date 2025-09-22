@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Bolt, CheckCircle2, Leaf, PiggyBank, Smartphone, Users } from "lucide-react";
+import {
+  Bolt,
+  CheckCircle2,
+  Leaf,
+  PiggyBank,
+  Smartphone,
+  Users,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { Counter } from "@/components/site/Counter";
 
@@ -32,8 +39,8 @@ function Hero() {
             Save Together. Live Smarter.
           </motion.h1>
           <p className="mt-4 max-w-xl text-base text-foreground/80 md:text-lg">
-            Join a community plan for SIM, broadband and energy. 100% green tariff,
-            zero deposit, transparent pricing.
+            Join a community plan for SIM, broadband and energy. 100% green
+            tariff, zero deposit, transparent pricing.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <Link
@@ -122,7 +129,8 @@ function TrustMarkers() {
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm">
           <span className="inline-flex items-center gap-2 rounded-md bg-muted px-3 py-1 text-foreground/80">
-            <CheckCircle2 className="h-4 w-4 text-primary" /> Regulated by CRU & ComReg
+            <CheckCircle2 className="h-4 w-4 text-primary" /> Regulated by CRU &
+            ComReg
           </span>
           <span className="inline-flex items-center gap-2 rounded-md bg-muted px-3 py-1 text-foreground/80">
             <CheckCircle2 className="h-4 w-4 text-secondary" /> GDPR Compliant
@@ -141,8 +149,7 @@ function ValueProps() {
     {
       icon: PiggyBank,
       title: "Save €150–€600/year on bills",
-      text:
-        "Group power means lower rates across SIM, broadband and energy.",
+      text: "Group power means lower rates across SIM, broadband and energy.",
     },
     {
       icon: Leaf,
@@ -168,7 +175,9 @@ function ValueProps() {
             className="rounded-2xl border border-border bg-white p-6 shadow-sm"
           >
             <it.icon className="h-7 w-7 text-primary" />
-            <h3 className="mt-3 text-lg font-semibold text-accent">{it.title}</h3>
+            <h3 className="mt-3 text-lg font-semibold text-accent">
+              {it.title}
+            </h3>
             <p className="mt-2 text-sm text-foreground/70">{it.text}</p>
           </motion.div>
         ))}
@@ -267,7 +276,9 @@ function CommunityImpact() {
           </div>
         </div>
         <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
-          <h3 className="font-semibold text-accent">Where our members are saving</h3>
+          <h3 className="font-semibold text-accent">
+            Where our members are saving
+          </h3>
           <div className="mt-4 aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/15 to-secondary/15">
             <div className="relative h-full w-full">
               {[
