@@ -185,7 +185,7 @@ function HowItWorks() {
       desc: "Pick Students, Young Pro or Family.",
     },
     {
-      icon: Sim,
+      icon: SimCard,
       title: "Bundle your SIM / broadband / energy",
       desc: "Choose what you need today – add later anytime.",
     },
