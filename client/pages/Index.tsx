@@ -111,21 +111,10 @@ function TrustMarkers() {
   return (
     <section aria-label="Trusted by" className="bg-white">
       <div className="container py-8">
-        <div className="flex items-center justify-center gap-8 overflow-x-auto whitespace-nowrap py-2 text-foreground/60">
-          {[
-            "University A",
-            "Employer B",
-            "Union C",
-            "College D",
-            "Tech Co E",
-          ].map((name) => (
-            <div
-              key={name}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm"
-            >
-              <CheckCircle2 className="h-4 w-4 text-secondary" /> {name}
-            </div>
-          ))}
+        <div className="flex items-center justify-center gap-3 py-2 text-sm text-foreground/80">
+          <span className="rounded-full bg-muted px-3 py-1">
+            Trusted by communities across Ireland & UK
+          </span>
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm">
           <span className="inline-flex items-center gap-2 rounded-md bg-muted px-3 py-1 text-foreground/80">
