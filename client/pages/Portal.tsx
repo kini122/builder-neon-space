@@ -3,7 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Portal() {
   const navigate = useNavigate();
-  const [user, setUser] = useState<{ email?: string; name?: string } | null>(null);
+  const [user, setUser] = useState<{ email?: string; name?: string } | null>(
+    null,
+  );
 
   useEffect(() => {
     const raw = localStorage.getItem("sss_user");
@@ -20,8 +22,15 @@ export default function Portal() {
       <main className="container py-12">
         <div className="mx-auto max-w-md rounded-2xl border border-border bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-bold text-accent">Portal Access</h1>
-          <p className="mt-2 text-sm text-foreground/80">Please log in to access your dashboard.</p>
-          <Link to="/login" className="mt-4 inline-flex rounded-lg bg-primary px-5 py-2 text-white">Go to Login</Link>
+          <p className="mt-2 text-sm text-foreground/80">
+            Please log in to access your dashboard.
+          </p>
+          <Link
+            to="/login"
+            className="mt-4 inline-flex rounded-lg bg-primary px-5 py-2 text-white"
+          >
+            Go to Login
+          </Link>
         </div>
       </main>
     );
@@ -32,12 +41,22 @@ export default function Portal() {
       <div className="grid gap-6 lg:grid-cols-3">
         <section className="rounded-2xl border border-border bg-white p-6 shadow-sm lg:col-span-2">
           <h2 className="text-xl font-semibold text-accent">Dashboard</h2>
-          <p className="mt-1 text-sm text-foreground/70">Welcome {user.name ? user.name.split(" ")[0] : user.email}.</p>
+          <p className="mt-1 text-sm text-foreground/70">
+            Welcome {user.name ? user.name.split(" ")[0] : user.email}.
+          </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <PlanCard title="SIM (eSIM)" status="Active" detail="5G • Unlimited EU" />
+            <PlanCard
+              title="SIM (eSIM)"
+              status="Active"
+              detail="5G • Unlimited EU"
+            />
             <PlanCard title="Broadband" status="Installed" detail="500 Mbps" />
-            <PlanCard title="Energy" status="Green Tariff" detail="100% renewable" />
+            <PlanCard
+              title="Energy"
+              status="Green Tariff"
+              detail="100% renewable"
+            />
           </div>
 
           <SavingsTracker />
@@ -63,7 +82,15 @@ export default function Portal() {
   );
 }
 
-function PlanCard({ title, status, detail }: { title: string; status: string; detail: string }) {
+function PlanCard({
+  title,
+  status,
+  detail,
+}: {
+  title: string;
+  status: string;
+  detail: string;
+}) {
   return (
     <div className="rounded-xl border border-border bg-muted/40 p-4">
       <div className="text-sm text-foreground/60">{title}</div>
@@ -84,9 +111,14 @@ function SavingsTracker() {
         <span>Target €{target}</span>
       </div>
       <div className="mt-2 h-2 w-full rounded bg-muted">
-        <div className="h-2 rounded bg-secondary" style={{ width: `${pct}%` }} />
+        <div
+          className="h-2 rounded bg-secondary"
+          style={{ width: `${pct}%` }}
+        />
       </div>
-      <p className="mt-2 text-sm text-accent">You’ve saved €{savedYtd} this year</p>
+      <p className="mt-2 text-sm text-accent">
+        You’ve saved €{savedYtd} this year
+      </p>
     </div>
   );
 }
@@ -94,7 +126,10 @@ function SavingsTracker() {
 function BillSplit() {
   const [rent, setRent] = useState(60);
   const [people, setPeople] = useState(3);
-  const share = useMemo(() => (people > 0 ? Math.round((rent / people) * 100) / 100 : 0), [rent, people]);
+  const share = useMemo(
+    () => (people > 0 ? Math.round((rent / people) * 100) / 100 : 0),
+    [rent, people],
+  );
   return (
     <div className="mt-4 rounded-xl border border-border bg-muted/40 p-4">
       <h4 className="font-semibold text-accent">Bill‑splitting (students)</h4>
@@ -117,7 +152,9 @@ function BillSplit() {
             className="mt-1 w-full rounded-md border border-border bg-white px-3 py-2 text-sm"
           />
         </label>
-        <div className="text-sm text-foreground/80">Each pays: <span className="font-semibold text-accent">€{share}</span></div>
+        <div className="text-sm text-foreground/80">
+          Each pays: <span className="font-semibold text-accent">€{share}</span>
+        </div>
       </div>
     </div>
   );
@@ -128,9 +165,15 @@ function Referral() {
   return (
     <div className="mt-4 rounded-xl border border-border bg-muted/40 p-4">
       <h4 className="font-semibold text-accent">Referral</h4>
-      <p className="mt-1 text-sm text-foreground/70">Invite family or friends – both save €20.</p>
+      <p className="mt-1 text-sm text-foreground/70">
+        Invite family or friends – both save €20.
+      </p>
       <div className="mt-2 flex items-center gap-2">
-        <input readOnly value={link} className="w-full rounded-md border border-border bg-white px-3 py-2 text-sm" />
+        <input
+          readOnly
+          value={link}
+          className="w-full rounded-md border border-border bg-white px-3 py-2 text-sm"
+        />
         <button
           onClick={() => navigator.clipboard.writeText(link)}
           className="rounded-md bg-primary px-3 py-2 text-sm text-white"

@@ -49,7 +49,9 @@ export default function Login() {
             />
           </div>
           <div>
-            <label className="text-sm font-semibold text-accent">Password</label>
+            <label className="text-sm font-semibold text-accent">
+              Password
+            </label>
             <input
               type="password"
               required
@@ -65,7 +67,10 @@ export default function Login() {
         </form>
 
         <p className="mt-4 text-sm text-foreground/70">
-          New here? <Link to="/onboarding" className="text-primary underline">Join now</Link>
+          New here?{" "}
+          <Link to="/onboarding" className="text-primary underline">
+            Join now
+          </Link>
         </p>
       </div>
     </main>

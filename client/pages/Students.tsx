@@ -4,7 +4,9 @@ export default function Students() {
   return (
     <main className="container py-12">
       <section className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-        <h1 className="text-3xl font-bold text-accent">Zero‑deposit SIM + WiFi</h1>
+        <h1 className="text-3xl font-bold text-accent">
+          Zero‑deposit SIM + WiFi
+        </h1>
         <p className="mt-2 text-foreground/80">
           Save about €200/year with our student bundle. Join with instant eSIM.
         </p>
@@ -15,7 +17,10 @@ export default function Students() {
           >
             Check your savings
           </Link>
-          <Link to="/onboarding" className="inline-flex items-center rounded-lg border border-border bg-white px-5 py-2">
+          <Link
+            to="/onboarding"
+            className="inline-flex items-center rounded-lg border border-border bg-white px-5 py-2"
+          >
             Join now
           </Link>
           <a href="https://wa.me/" className="text-primary underline">
@@ -28,7 +33,8 @@ export default function Students() {
         <div className="rounded-xl border border-border bg-muted/40 p-6">
           <h2 className="font-semibold text-accent">Student testimonial</h2>
           <p className="mt-2 text-sm text-foreground/70">
-            “I moved into shared housing and activated my eSIM in minutes. With the student bundle I’m saving about €200 a year.”
+            “I moved into shared housing and activated my eSIM in minutes. With
+            the student bundle I’m saving about €200 a year.”
           </p>
         </div>
         <div className="rounded-xl border border-border bg-muted/40 p-6">
@@ -43,9 +49,16 @@ export default function Students() {
 
       <section className="mt-10 rounded-xl border border-border bg-white p-6 shadow-sm">
         <h3 className="font-semibold text-accent">Savings Calculator</h3>
-        <p className="mt-1 text-sm text-foreground/70">Estimate your savings in seconds.</p>
+        <p className="mt-1 text-sm text-foreground/70">
+          Estimate your savings in seconds.
+        </p>
         <div className="mt-4">
-          <Link to="/calculator" className="inline-flex rounded-lg bg-primary px-5 py-2 text-white">Open calculator</Link>
+          <Link
+            to="/calculator"
+            className="inline-flex rounded-lg bg-primary px-5 py-2 text-white"
+          >
+            Open calculator
+          </Link>
         </div>
       </section>
     </main>

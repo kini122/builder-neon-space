@@ -112,7 +112,9 @@ function TrustMarkers() {
     <section aria-label="Trusted by" className="bg-white">
       <div className="container py-8">
         <div className="flex items-center justify-center gap-3 py-2 text-sm text-foreground/80">
-          <span className="rounded-full bg-muted px-3 py-1">Trusted by communities across Ireland & UK</span>
+          <span className="rounded-full bg-muted px-3 py-1">
+            Trusted by communities across Ireland & UK
+          </span>
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm">
           <span className="inline-flex items-center gap-2 rounded-md bg-muted px-3 py-1 text-foreground/80">
