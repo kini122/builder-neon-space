@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bolt, CheckCircle2, Leaf, PiggyBank, SimCard, Users } from "lucide-react";
+import { Bolt, CheckCircle2, Leaf, PiggyBank, Smartphone, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Counter } from "@/components/site/Counter";
 
@@ -77,7 +77,7 @@ function Hero() {
             <div className="flex h-full items-center justify-center rounded-2xl bg-white/95">
               <div className="grid grid-cols-3 gap-6 p-6 text-accent">
                 <IconCard Icon={Users} label="Students" />
-                <IconCard Icon={SimCard} label="eSIM" />
+                <IconCard Icon={Smartphone} label="eSIM" />
                 <IconCard Icon={Leaf} label="100% Green" />
                 <IconCard Icon={Bolt} label="Energy" />
                 <IconCard Icon={PiggyBank} label="Savings" />
@@ -185,7 +185,7 @@ function HowItWorks() {
       desc: "Pick Students, Young Pro or Family.",
     },
     {
-      icon: SimCard,
+      icon: Smartphone,
       title: "Bundle your SIM / broadband / energy",
       desc: "Choose what you need today – add later anytime.",
     },
