@@ -8,6 +8,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Calculator from "./pages/Calculator";
+import Students from "./pages/Students";
+import NavBar from "@/components/site/NavBar";
+import Footer from "@/components/site/Footer";
+import WhatsAppFab from "@/components/site/WhatsAppFab";
+import CookieConsent from "@/components/site/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -17,11 +23,17 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/calculator" element={<Calculator />} />
+          <Route path="/students" element={<Students />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
+        <WhatsAppFab />
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
