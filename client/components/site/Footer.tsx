@@ -20,7 +20,7 @@ export default function Footer() {
             <li><Link to="/students" className="hover:text-primary">Students</Link></li>
             <li><Link to="/onboarding" className="hover:text-primary">Young Professionals</Link></li>
             <li><Link to="/onboarding" className="hover:text-primary">Families</Link></li>
-            <li><a href="#partners" className="hover:text-primary">Partners</a></li>
+            <li><Link to="/support" className="hover:text-primary">Partners</Link></li>
           </ul>
         </div>
         <div className="space-y-3">
