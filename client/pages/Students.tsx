@@ -4,7 +4,7 @@ import ScrollFloat from "@/components/ui/ScrollFloat";
 
 export default function Students() {
   return (
-    <main className="container py-12">
+    <main className="container py-12 overflow-x-hidden">
       <section className="rounded-2xl border border-border bg-white p-8 shadow-sm">
         <h1 className="text-3xl font-bold text-accent">
           Zero‑deposit SIM + WiFi
@@ -92,7 +92,7 @@ export default function Students() {
                 .map((t, i) => (
                   <div
                     key={i}
-                    className="min-w-[220px] flex items-center gap-3 rounded-xl border border-border bg-white p-3 shadow-sm"
+                    className="min-w-[180px] sm:min-w-[220px] flex items-center gap-3 rounded-xl border border-border bg-white p-3 shadow-sm"
                   >
                     <img
                       src={t.img}

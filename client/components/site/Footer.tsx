@@ -19,9 +19,9 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <a href="#impact" className="hover:text-primary">
+              <Link to="/#impact" className="hover:text-primary">
                 Energy – Green Tariff
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/students" className="hover:text-primary">
