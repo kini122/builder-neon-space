@@ -85,16 +85,16 @@ function Hero() {
           aria-hidden
         >
           <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-accent to-primary p-1 shadow-brand">
-            <div className="flex h-full items-center justify-center rounded-2xl bg-white/95">
-              <div className="grid grid-cols-3 gap-6 p-6 text-accent">
-                <IconCard Icon={Users} label="Students" />
-                <IconCard Icon={Smartphone} label="eSIM" />
-                <IconCard Icon={Leaf} label="100% Green" />
-                <IconCard Icon={Bolt} label="Energy" />
-                <IconCard Icon={PiggyBank} label="Savings" />
-                <IconCard Icon={CheckCircle2} label="No deposit" />
-              </div>
-            </div>
+            <div
+              className="h-full rounded-2xl bg-white/95"
+              style={{
+                backgroundImage:
+                  "url(https://cdn.builder.io/o/assets%2Fa975a65054c947b9ba8beddf8340c96e%2F6f4f61e96fbd46a38b03fdba97d26b77?alt=media&token=5ed7909c-8db9-4730-ae1d-137c8c6f933b&apiKey=a975a65054c947b9ba8beddf8340c96e)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            />
           </div>
         </motion.div>
       </div>
@@ -131,6 +131,16 @@ function TrustMarkers() {
           <span className="inline-flex items-center gap-2 rounded-md bg-muted px-3 py-1 text-foreground/80">
             <CheckCircle2 className="h-4 w-4 text-accent" /> Secure by design
           </span>
+        </div>
+      </div>
+      <div className="container pb-8">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <IconCard Icon={Users} label="Students" />
+          <IconCard Icon={Smartphone} label="eSIM" />
+          <IconCard Icon={Leaf} label="100% Green" />
+          <IconCard Icon={Bolt} label="Energy" />
+          <IconCard Icon={PiggyBank} label="Savings" />
+          <IconCard Icon={CheckCircle2} label="No deposit" />
         </div>
       </div>
     </section>
