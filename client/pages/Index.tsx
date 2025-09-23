@@ -197,7 +197,7 @@ function HowItWorks() {
     <section id="how" className="bg-white">
       <div className="container grid gap-10 py-16 lg:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-bold text-accent">How it works</h2>
+          <ScrollFloat containerClassName="text-accent" textClassName="font-bold">How it works</ScrollFloat>
           <p className="mt-2 max-w-prose text-foreground/80">
             Three steps to start saving. No deposit, no hassle.
           </p>
@@ -242,7 +242,7 @@ function CommunityImpact() {
     <section id="impact" className="bg-muted/40">
       <div className="container grid gap-10 py-16 lg:grid-cols-2">
         <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
-          <h2 className="text-2xl font-bold text-accent">Community Impact</h2>
+          <ScrollFloat containerClassName="text-accent" textClassName="font-bold">Community Impact</ScrollFloat>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             <div>
               <p className="text-sm text-foreground/60">Total € saved</p>
