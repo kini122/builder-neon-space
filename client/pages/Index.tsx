@@ -78,7 +78,11 @@ function Hero() {
 
           <div
             className="mt-10 grid w-full grid-cols-2 gap-4 rounded-xl bg-white shadow-sm"
-            style={{ maxWidth: 419, margin: "40px -12px 0 0", padding: "16px 0 16px 16px" }}
+            style={{
+              maxWidth: 419,
+              margin: "40px -12px 0 0",
+              padding: "16px 0 16px 16px",
+            }}
           >
             <div>
               <p className="text-sm text-foreground/60">Community savings</p>
