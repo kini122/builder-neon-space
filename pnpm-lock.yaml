@@ -14,6 +14,12 @@ importers:
       express:
         specifier: ^5.1.0
         version: 5.1.0
+      gsap:
+        specifier: ^3.13.0
+        version: 3.13.0
+      ogl:
+        specifier: ^1.0.11
+        version: 1.0.11
       zod:
         specifier: ^3.25.76
         version: 3.25.76
@@ -1969,6 +1975,9 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
+  gsap@3.13.0:
+    resolution: {integrity: sha512-QL7MJ2WMjm1PHWsoFrAQH/J8wUeqZvMtHO58qdekHpCfhvhSL4gSiz6vJf5EeMP0LOn3ZCprL2ki/gjED8ghVw==}
+
   has-symbols@1.1.0:
     resolution: {integrity: sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ==}
     engines: {node: '>= 0.4'}
@@ -2201,6 +2210,9 @@ packages:
   object-inspect@1.13.4:
     resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
     engines: {node: '>= 0.4'}
+
+  ogl@1.0.11:
+    resolution: {integrity: sha512-kUpC154AFfxi16pmZUK4jk3J+8zxwTWGPo03EoYA8QPbzikHoaC82n6pNTbd+oEaJonaE8aPWBlX7ad9zrqLsA==}
 
   on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
@@ -4629,6 +4641,8 @@ snapshots:
 
   gopd@1.2.0: {}
 
+  gsap@3.13.0: {}
+
   has-symbols@1.1.0: {}
 
   hasown@2.0.2:
@@ -4809,6 +4823,8 @@ snapshots:
   object-hash@3.0.0: {}
 
   object-inspect@1.13.4: {}
+
+  ogl@1.0.11: {}
 
   on-finished@2.4.1:
     dependencies:
