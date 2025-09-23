@@ -42,12 +42,12 @@ export default function NavBar() {
           <NavItem to="/calculator" label="Calculator" />
           <NavItem to="/onboarding" label="Join" />
           <NavItem to="/portal" label="Portal" />
-          <a
-            href="#impact"
+          <Link
+            to="/#impact"
             className="text-foreground/80 hover:text-primary transition-colors"
           >
             Impact
-          </a>
+          </Link>
         </nav>
         <button
           className="md:hidden inline-flex items-center rounded-md border border-border bg-white px-2 py-1 text-xs"
