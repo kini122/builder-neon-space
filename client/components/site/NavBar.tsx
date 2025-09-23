@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, Menu } from "lucide-react";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,14 +18,14 @@ export default function NavBar() {
         scrolled ? "bg-white/90 backdrop-blur shadow" : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between py-3">
+      <div className="container flex items-center justify-between py-2 md:py-3">
         <Link to="/" className="flex items-center gap-2 group">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Fa975a65054c947b9ba8beddf8340c96e%2Fbf7efaedbffa48bba4c5aca76a2f0bf6?format=webp&width=120"
             alt="Switch Smart Save Logo"
-            className="h-8 w-auto"
+            className="h-6 w-auto md:h-8"
           />
-          <span className="text-xl font-bold tracking-tight text-accent group-hover:text-primary transition-colors">
+          <span className="text-lg md:text-xl font-bold tracking-tight text-accent group-hover:text-primary transition-colors">
             Switch Smart Save
           </span>
         </Link>
@@ -46,12 +46,13 @@ export default function NavBar() {
           </a>
         </nav>
         <button
-          className="md:hidden inline-flex items-center rounded-md border border-border bg-white px-3 py-2 text-sm"
+          className="md:hidden inline-flex items-center rounded-md border border-border bg-white px-2 py-1 text-xs"
+          aria-label="Open menu"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
         >
-          Menu
+          <Menu className="h-5 w-5" />
         </button>
         <div className="flex items-center gap-2">
           <a
@@ -63,7 +64,7 @@ export default function NavBar() {
           </a>
           <Link
             to="/calculator"
-            className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-white shadow-brand hover:scale-[1.02] active:scale-100 transition-transform"
+            className="inline-flex items-center rounded-lg bg-primary px-3 py-1 text-xs md:text-sm md:px-4 md:py-2 text-white shadow-brand hover:scale-[1.02] active:scale-100 transition-transform"
           >
             Check Your Savings
           </Link>
