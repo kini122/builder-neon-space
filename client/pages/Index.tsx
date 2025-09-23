@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Bolt,
   CheckCircle2,
@@ -25,13 +25,21 @@ export default function Index() {
   );
 }
 
+import { useRef } from "react";
 function Hero() {
+  const ref = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({ target: ref as any, offset: ["start start", "end start"] });
+  const fade = useTransform(scrollYProgress, [0, 1], [1, 0]);
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 opacity-80">
-        <Iridescence color={[0.0, 0.7, 0.5]} speed={0.9} amplitude={0.06} />
-      </div>
-      <div className="container grid gap-10 py-16 md:grid-cols-2 md:py-24">
+    <section ref={ref as any} className="relative overflow-hidden">
+      <motion.div className="absolute inset-0 -z-10" style={{ opacity: fade }}>
+        <div className="absolute inset-0 bg-white/85" />
+        <div className="absolute inset-0 opacity-80">
+          <Iridescence color={[0.176, 0.545, 0.545]} speed={0.8} amplitude={0.05} />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white" />
+      </motion.div>
+      <div className="container grid gap-10 py-14 md:grid-cols-2 md:py-24">
         <div className="flex flex-col justify-center">
           <RotatingText
             texts={[
@@ -104,10 +112,16 @@ function Hero() {
 
 function IconCard({ Icon, label }: { Icon: any; label: string }) {
   return (
-    <div className="group flex flex-col items-center gap-2 rounded-xl border border-border p-4 shadow-sm transition-transform hover:-translate-y-1">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4 }}
+      className="group flex flex-col items-center gap-2 rounded-xl border border-border p-4 shadow-sm transition-transform hover:-translate-y-1"
+    >
       <Icon className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
       <span className="text-sm font-semibold text-accent">{label}</span>
-    </div>
+    </motion.div>
   );
 }
 
