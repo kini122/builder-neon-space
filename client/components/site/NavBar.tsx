@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { PhoneCall, Menu } from "lucide-react";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  useEffect(() => {
+    if (open) setOpen(false);
+  }, [location]);
 
   return (
     <header
@@ -18,14 +22,14 @@ export default function NavBar() {
         scrolled ? "bg-white/90 backdrop-blur shadow" : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between py-2 md:py-3">
+      <div className="container flex items-center justify-between py-1.5 md:py-3">
         <Link to="/" className="flex items-center gap-2 group">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Fa975a65054c947b9ba8beddf8340c96e%2Fbf7efaedbffa48bba4c5aca76a2f0bf6?format=webp&width=120"
             alt="Switch Smart Save Logo"
             className="h-6 w-auto md:h-8"
           />
-          <span className="text-lg md:text-xl font-bold tracking-tight text-accent group-hover:text-primary transition-colors">
+          <span className="text-base sm:text-lg md:text-xl font-bold tracking-tight text-accent group-hover:text-primary transition-colors">
             Switch Smart Save
           </span>
         </Link>
@@ -58,7 +62,7 @@ export default function NavBar() {
           <a
             href="https://wa.me/"
             aria-label="WhatsApp"
-            className="hidden sm:inline-flex items-center gap-2 rounded-lg border border-border bg-white px-3 py-2 text-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+            className="hidden md:inline-flex items-center gap-2 rounded-lg border border-border bg-white px-3 py-2 text-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
           >
             <PhoneCall className="h-4 w-4 text-green-600" /> WhatsApp
           </a>
