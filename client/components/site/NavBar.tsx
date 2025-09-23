@@ -85,12 +85,12 @@ export default function NavBar() {
             <NavItem to="/calculator" label="Calculator" />
             <NavItem to="/onboarding" label="Join" />
             <NavItem to="/portal" label="Portal" />
-            <a
-              href="#impact"
+            <Link
+              to="/#impact"
               className="text-foreground/80 hover:text-primary transition-colors"
             >
               Impact
-            </a>
+            </Link>
             <a href="https://wa.me/" className="text-primary">
               WhatsApp
             </a>
