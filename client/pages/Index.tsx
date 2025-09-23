@@ -28,14 +28,21 @@ export default function Index() {
 import { useRef } from "react";
 function Hero() {
   const ref = useRef<HTMLElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: ref as any, offset: ["start start", "end start"] });
+  const { scrollYProgress } = useScroll({
+    target: ref as any,
+    offset: ["start start", "end start"],
+  });
   const fade = useTransform(scrollYProgress, [0, 1], [1, 0]);
   return (
     <section ref={ref as any} className="relative overflow-hidden">
       <motion.div className="absolute inset-0 -z-10" style={{ opacity: fade }}>
         <div className="absolute inset-0 bg-white/85" />
         <div className="absolute inset-0 opacity-80">
-          <Iridescence color={[0.176, 0.545, 0.545]} speed={0.8} amplitude={0.05} />
+          <Iridescence
+            color={[0.176, 0.545, 0.545]}
+            speed={0.8}
+            amplitude={0.05}
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white" />
       </motion.div>
