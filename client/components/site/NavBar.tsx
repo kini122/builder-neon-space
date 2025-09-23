@@ -4,6 +4,7 @@ import { PhoneCall } from "lucide-react";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -28,7 +29,7 @@ export default function NavBar() {
             Switch Smart Save
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Primary">
           <NavItem to="/" label="Home" />
           <NavItem to="/students" label="Students" />
           <NavItem to="/calculator" label="Calculator" />
@@ -41,6 +42,14 @@ export default function NavBar() {
             Impact
           </a>
         </nav>
+        <button
+          className="md:hidden inline-flex items-center rounded-md border border-border bg-white px-3 py-2 text-sm"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen((v) => !v)}
+        >
+          Menu
+        </button>
         <div className="flex items-center gap-2">
           <a
             href="https://wa.me/"
@@ -57,6 +66,19 @@ export default function NavBar() {
           </Link>
         </div>
       </div>
+      {open && (
+        <div id="mobile-menu" className="md:hidden border-t bg-white/95 backdrop-blur">
+          <div className="container grid gap-2 py-3 text-sm">
+            <NavItem to="/" label="Home" />
+            <NavItem to="/students" label="Students" />
+            <NavItem to="/calculator" label="Calculator" />
+            <NavItem to="/onboarding" label="Join" />
+            <NavItem to="/portal" label="Portal" />
+            <a href="#impact" className="text-foreground/80 hover:text-primary transition-colors">Impact</a>
+            <a href="https://wa.me/" className="text-primary">WhatsApp</a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
