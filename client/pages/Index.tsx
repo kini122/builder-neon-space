@@ -27,20 +27,17 @@ export default function Index() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
-      <div className="absolute -left-10 -top-10 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
-      <div className="absolute -right-10 -bottom-24 h-96 w-96 rounded-full bg-secondary/20 blur-3xl" />
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 -z-10 opacity-80">
+        <Iridescence color={[0.0,0.7,0.5]} speed={0.9} amplitude={0.06} />
+      </div>
       <div className="container grid gap-10 py-16 md:grid-cols-2 md:py-24">
         <div className="flex flex-col justify-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <RotatingText
+            texts={["Save Together. Live Smarter.", "100% Green Tariff", "No deposit. Instant eSIM"]}
             className="text-4xl font-extrabold leading-tight text-accent md:text-5xl"
-          >
-            Save Together. Live Smarter.
-          </motion.h1>
+            elementLevelClassName="text-accent"
+          />
           <p className="mt-4 max-w-xl text-base text-foreground/80 md:text-lg">
             Join a community plan for SIM, broadband and energy. 100% green
             tariff, zero deposit, transparent pricing.
