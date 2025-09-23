@@ -91,20 +91,18 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative"
           aria-hidden
-        >
-          <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-accent to-primary p-1 shadow-brand">
-            <div
-              className="h-full rounded-2xl bg-white/95"
-              style={{
-                backgroundImage:
-                  "url(https://cdn.builder.io/o/assets%2Fa975a65054c947b9ba8beddf8340c96e%2F6f4f61e96fbd46a38b03fdba97d26b77?alt=media&token=5ed7909c-8db9-4730-ae1d-137c8c6f933b&apiKey=a975a65054c947b9ba8beddf8340c96e)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            />
-          </div>
-        </motion.div>
+          style={{
+            backgroundImage:
+              "url(https://cdn.builder.io/api/v1/image/assets%2Fa975a65054c947b9ba8beddf8340c96e%2F60c1ce21cc444cf2b56f3d22318227bd)",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            flexGrow: 0,
+            margin: "-93px 0 -32px",
+            borderRadius: "16px",
+            minHeight: "300px",
+          }}
+        />
       </div>
     </section>
   );
