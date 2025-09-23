@@ -29,12 +29,16 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 opacity-80">
-        <Iridescence color={[0.0,0.7,0.5]} speed={0.9} amplitude={0.06} />
+        <Iridescence color={[0.0, 0.7, 0.5]} speed={0.9} amplitude={0.06} />
       </div>
       <div className="container grid gap-10 py-16 md:grid-cols-2 md:py-24">
         <div className="flex flex-col justify-center">
           <RotatingText
-            texts={["Save Together. Live Smarter.", "100% Green Tariff", "No deposit. Instant eSIM"]}
+            texts={[
+              "Save Together. Live Smarter.",
+              "100% Green Tariff",
+              "No deposit. Instant eSIM",
+            ]}
             className="text-4xl font-extrabold leading-tight text-accent md:text-5xl"
             elementLevelClassName="text-accent"
           />
@@ -197,7 +201,12 @@ function HowItWorks() {
     <section id="how" className="bg-white">
       <div className="container grid gap-10 py-16 lg:grid-cols-2">
         <div>
-          <ScrollFloat containerClassName="text-accent" textClassName="font-bold">How it works</ScrollFloat>
+          <ScrollFloat
+            containerClassName="text-accent"
+            textClassName="font-bold"
+          >
+            How it works
+          </ScrollFloat>
           <p className="mt-2 max-w-prose text-foreground/80">
             Three steps to start saving. No deposit, no hassle.
           </p>
@@ -242,7 +251,12 @@ function CommunityImpact() {
     <section id="impact" className="bg-muted/40">
       <div className="container grid gap-10 py-16 lg:grid-cols-2">
         <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
-          <ScrollFloat containerClassName="text-accent" textClassName="font-bold">Community Impact</ScrollFloat>
+          <ScrollFloat
+            containerClassName="text-accent"
+            textClassName="font-bold"
+          >
+            Community Impact
+          </ScrollFloat>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             <div>
               <p className="text-sm text-foreground/60">Total € saved</p>

@@ -29,7 +29,10 @@ export default function NavBar() {
             Switch Smart Save
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Primary">
+        <nav
+          className="hidden md:flex items-center gap-6 text-sm"
+          aria-label="Primary"
+        >
           <NavItem to="/" label="Home" />
           <NavItem to="/students" label="Students" />
           <NavItem to="/calculator" label="Calculator" />
@@ -67,15 +70,25 @@ export default function NavBar() {
         </div>
       </div>
       {open && (
-        <div id="mobile-menu" className="md:hidden border-t bg-white/95 backdrop-blur">
+        <div
+          id="mobile-menu"
+          className="md:hidden border-t bg-white/95 backdrop-blur"
+        >
           <div className="container grid gap-2 py-3 text-sm">
             <NavItem to="/" label="Home" />
             <NavItem to="/students" label="Students" />
             <NavItem to="/calculator" label="Calculator" />
             <NavItem to="/onboarding" label="Join" />
             <NavItem to="/portal" label="Portal" />
-            <a href="#impact" className="text-foreground/80 hover:text-primary transition-colors">Impact</a>
-            <a href="https://wa.me/" className="text-primary">WhatsApp</a>
+            <a
+              href="#impact"
+              className="text-foreground/80 hover:text-primary transition-colors"
+            >
+              Impact
+            </a>
+            <a href="https://wa.me/" className="text-primary">
+              WhatsApp
+            </a>
           </div>
         </div>
       )}
