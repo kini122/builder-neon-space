@@ -17,6 +17,11 @@ import NavBar from "@/components/site/NavBar";
 import Footer from "@/components/site/Footer";
 import WhatsAppFab from "@/components/site/WhatsAppFab";
 import CookieConsent from "@/components/site/CookieConsent";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Cookies from "./pages/Cookies";
+import FAQ from "./pages/FAQ";
+import Support from "./pages/Support";
 
 const queryClient = new QueryClient();
 
