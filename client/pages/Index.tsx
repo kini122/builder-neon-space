@@ -9,6 +9,9 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Counter } from "@/components/site/Counter";
+import Iridescence from "@/components/visual/Iridescence";
+import RotatingText from "@/components/ui/RotatingText";
+import ScrollFloat from "@/components/ui/ScrollFloat";
 
 export default function Index() {
   return (
