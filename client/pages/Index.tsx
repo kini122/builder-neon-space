@@ -377,16 +377,13 @@ function CommunityImpact() {
           <h3 className="font-semibold text-accent">
             Where our members are saving
           </h3>
-          <div
-            className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative"
-            style={{
-              backgroundImage:
-                "url(https://staticmap.openstreetmap.de/staticmap.php?center=51.5074,-0.1278&zoom=12&size=800x600&maptype=mapnik)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            aria-label="Map of London"
-          >
+          <div className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative" aria-label="Map of London">
+            <img
+              src="https://staticmap.openstreetmap.de/staticmap.php?center=51.5074,-0.1278&zoom=12&size=800x600&maptype=mapnik"
+              alt="London map"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
             <div className="absolute inset-0 pointer-events-none">
               {[
                 { left: "20%", top: "40%" },
