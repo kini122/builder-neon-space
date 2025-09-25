@@ -314,7 +314,9 @@ function CommunityImpact() {
             </div>
           </div>
           <div className="mt-6 space-y-4">
-            <h4 className="font-semibold text-accent">This month vs typical market</h4>
+            <h4 className="font-semibold text-accent">
+              This month vs typical market
+            </h4>
             <div className="space-y-3 text-sm">
               <div>
                 <div className="flex items-center justify-between">
@@ -322,7 +324,10 @@ function CommunityImpact() {
                   <span className="text-accent font-medium">~€18 saved</span>
                 </div>
                 <div className="mt-1 h-2 w-full rounded bg-muted">
-                  <div className="h-2 rounded bg-secondary" style={{ width: "65%" }} />
+                  <div
+                    className="h-2 rounded bg-secondary"
+                    style={{ width: "65%" }}
+                  />
                 </div>
               </div>
               <div>
@@ -331,7 +336,10 @@ function CommunityImpact() {
                   <span className="text-accent font-medium">~€14 saved</span>
                 </div>
                 <div className="mt-1 h-2 w-full rounded bg-muted">
-                  <div className="h-2 rounded bg-secondary" style={{ width: "50%" }} />
+                  <div
+                    className="h-2 rounded bg-secondary"
+                    style={{ width: "50%" }}
+                  />
                 </div>
               </div>
               <div>
@@ -340,7 +348,10 @@ function CommunityImpact() {
                   <span className="text-accent font-medium">8–15% lower</span>
                 </div>
                 <div className="mt-1 h-2 w-full rounded bg-muted">
-                  <div className="h-2 rounded bg-secondary" style={{ width: "40%" }} />
+                  <div
+                    className="h-2 rounded bg-secondary"
+                    style={{ width: "40%" }}
+                  />
                 </div>
               </div>
             </div>
@@ -367,17 +378,28 @@ function CommunityImpact() {
             </div>
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href="/calculator" className="inline-flex items-center rounded-lg bg-primary px-5 py-2 text-white shadow-brand hover:-translate-y-0.5 transition">
+            <a
+              href="/calculator"
+              className="inline-flex items-center rounded-lg bg-primary px-5 py-2 text-white shadow-brand hover:-translate-y-0.5 transition"
+            >
               Estimate your savings
             </a>
-            <a href="#impact-methodology" className="text-sm text-accent underline underline-offset-4">Methodology</a>
+            <a
+              href="#impact-methodology"
+              className="text-sm text-accent underline underline-offset-4"
+            >
+              Methodology
+            </a>
           </div>
         </div>
         <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
           <h3 className="font-semibold text-accent">
             Where our members are saving
           </h3>
-          <div className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative" aria-label="Map of London">
+          <div
+            className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative"
+            aria-label="Map of London"
+          >
             <img
               src="https://staticmap.openstreetmap.de/staticmap.php?center=51.5074,-0.1278&zoom=12&size=800x600&maptype=mapnik"
               alt="London map"
@@ -402,7 +424,9 @@ function CommunityImpact() {
           </p>
           <div className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
             <div className="text-foreground/60">Average monthly saving</div>
-            <div className="text-accent font-medium">€12–€25 mobile, €10–€18 broadband</div>
+            <div className="text-accent font-medium">
+              €12–€25 mobile, €10–€18 broadband
+            </div>
             <div className="text-foreground/60">Green energy mix</div>
             <div className="text-accent font-medium">100% renewable tariff</div>
             <div className="text-foreground/60">Deposit required</div>
@@ -413,7 +437,9 @@ function CommunityImpact() {
       <div className="container pb-16">
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
-            <h4 className="font-semibold text-accent">Top savings categories</h4>
+            <h4 className="font-semibold text-accent">
+              Top savings categories
+            </h4>
             <ul className="mt-3 list-disc pl-5 text-sm text-foreground/70 space-y-1">
               <li>Mobile plans: average €12–€25/month saved</li>
               <li>Broadband: average €10–€18/month saved</li>
