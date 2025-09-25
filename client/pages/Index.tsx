@@ -318,7 +318,16 @@ function CommunityImpact() {
           <h3 className="font-semibold text-accent">
             Where our members are saving
           </h3>
-          <div className="mt-4 aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/15 to-secondary/15">
+          <div
+            className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border"
+            style={{
+              backgroundImage:
+                "url(https://staticmap.openstreetmap.de/staticmap.php?center=51.5074,-0.1278&zoom=12&size=800x600&maptype=mapnik&markers=51.5074,-0.1278,lightblue1)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            aria-label="Map of London"
+          >
             <div className="relative h-full w-full">
               {[
                 { left: "20%", top: "40%" },
@@ -336,6 +345,34 @@ function CommunityImpact() {
           <p className="mt-3 text-sm text-foreground/70">
             Hotspots across Ireland & UK. More communities joining every week.
           </p>
+        </div>
+      </div>
+      <div className="container pb-16">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+            <h4 className="font-semibold text-accent">Top savings categories</h4>
+            <ul className="mt-3 list-disc pl-5 text-sm text-foreground/70 space-y-1">
+              <li>Mobile plans: average €12–€25/month saved</li>
+              <li>Broadband: average €10–€18/month saved</li>
+              <li>Energy bills: average 8–15% reduction</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+            <h4 className="font-semibold text-accent">Recent community wins</h4>
+            <ul className="mt-3 list-disc pl-5 text-sm text-foreground/70 space-y-1">
+              <li>Student group bulk eSIM discount negotiated</li>
+              <li>Green tariff pilot expanded to two new regions</li>
+              <li>No-deposit onboarding rolled out for families</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+            <h4 className="font-semibold text-accent">How we measure impact</h4>
+            <p className="mt-3 text-sm text-foreground/70">
+              Savings are computed from verified bills and live plan rates, with
+              monthly updates across cohorts. Carbon reduction is estimated from
+              supplier emission factors for the Community Green Tariff.
+            </p>
+          </div>
         </div>
       </div>
     </section>
