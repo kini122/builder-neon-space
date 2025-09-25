@@ -328,7 +328,7 @@ function CommunityImpact() {
                 <span
                   key={i}
                   className="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary shadow animate-pulse"
-                  style={p as React.CSSProperties}
+                  style={p}
                 />
               ))}
             </div>
