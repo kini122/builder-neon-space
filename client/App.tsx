@@ -56,4 +56,17 @@ const App = () => (
   </QueryClientProvider>
 );
 
+function ScrollToHash() {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        (el as HTMLElement).scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+  return null;
+}
+
 createRoot(document.getElementById("root")!).render(<App />);
