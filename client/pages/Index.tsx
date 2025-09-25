@@ -313,29 +313,155 @@ function CommunityImpact() {
               </p>
             </div>
           </div>
+          <div className="mt-6 space-y-4">
+            <h4 className="font-semibold text-accent">
+              This month vs typical market
+            </h4>
+            <div className="space-y-3 text-sm">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-foreground/70">Mobile</span>
+                  <span className="text-accent font-medium">~€18 saved</span>
+                </div>
+                <div className="mt-1 h-2 w-full rounded bg-muted">
+                  <div
+                    className="h-2 rounded bg-secondary"
+                    style={{ width: "65%" }}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-foreground/70">Broadband</span>
+                  <span className="text-accent font-medium">~€14 saved</span>
+                </div>
+                <div className="mt-1 h-2 w-full rounded bg-muted">
+                  <div
+                    className="h-2 rounded bg-secondary"
+                    style={{ width: "50%" }}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-foreground/70">Energy</span>
+                  <span className="text-accent font-medium">8–15% lower</span>
+                </div>
+                <div className="mt-1 h-2 w-full rounded bg-muted">
+                  <div
+                    className="h-2 rounded bg-secondary"
+                    style={{ width: "40%" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-border bg-muted/40 p-4">
+              <h5 className="text-accent font-semibold">What this means</h5>
+              <ul className="mt-2 list-disc pl-5 text-sm text-foreground/70 space-y-1">
+                <li>Lower baseline costs across common plans</li>
+                <li>No deposit to join, flexible add-ons</li>
+                <li>Backed by green energy commitments</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-border bg-muted/40 p-4">
+              <h5 className="text-accent font-semibold">Since last month</h5>
+              <div className="mt-2 grid grid-cols-2 gap-2 text-sm">
+                <div className="text-foreground/60">Total saved</div>
+                <div className="text-secondary font-medium">+4%</div>
+                <div className="text-foreground/60">CO₂ reduced</div>
+                <div className="text-secondary font-medium">+2%</div>
+                <div className="text-foreground/60">Members</div>
+                <div className="text-secondary font-medium">+180</div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href="/calculator"
+              className="inline-flex items-center rounded-lg bg-primary px-5 py-2 text-white shadow-brand hover:-translate-y-0.5 transition"
+            >
+              Estimate your savings
+            </a>
+            <a
+              href="#impact-methodology"
+              className="text-sm text-accent underline underline-offset-4"
+            >
+              Methodology
+            </a>
+          </div>
         </div>
         <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
           <h3 className="font-semibold text-accent">
             Where our members are saving
           </h3>
-          <div className="mt-4 aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/15 to-secondary/15">
-            <div className="relative h-full w-full">
+          <div
+            className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative"
+            aria-label="Map of London"
+          >
+            <img
+              src="https://staticmap.openstreetmap.de/staticmap.php?center=51.5074,-0.1278&zoom=12&size=800x600&maptype=mapnik"
+              alt="London map"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 pointer-events-none">
               {[
                 { left: "20%", top: "40%" },
                 { left: "48%", top: "30%" },
                 { left: "70%", top: "55%" },
               ].map((p, i) => (
-                <span
-                  key={i}
-                  className="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary shadow animate-pulse"
-                  style={p as React.CSSProperties}
-                />
+                <div key={i} className="absolute" style={p}>
+                  <span className="absolute h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/40 animate-ping" />
+                  <span className="absolute h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary shadow-xl ring-4 ring-white/80 drop-shadow" />
+                </div>
               ))}
             </div>
           </div>
           <p className="mt-3 text-sm text-foreground/70">
             Hotspots across Ireland & UK. More communities joining every week.
           </p>
+          <div className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
+            <div className="text-foreground/60">Average monthly saving</div>
+            <div className="text-accent font-medium">
+              €12–€25 mobile, €10–€18 broadband
+            </div>
+            <div className="text-foreground/60">Green energy mix</div>
+            <div className="text-accent font-medium">100% renewable tariff</div>
+            <div className="text-foreground/60">Deposit required</div>
+            <div className="text-accent font-medium">No</div>
+          </div>
+        </div>
+      </div>
+      <div className="container pb-16">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+            <h4 className="font-semibold text-accent">
+              Top savings categories
+            </h4>
+            <ul className="mt-3 list-disc pl-5 text-sm text-foreground/70 space-y-1">
+              <li>Mobile plans: average €12–€25/month saved</li>
+              <li>Broadband: average €10–€18/month saved</li>
+              <li>Energy bills: average 8–15% reduction</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+            <h4 className="font-semibold text-accent">Recent community wins</h4>
+            <ul className="mt-3 list-disc pl-5 text-sm text-foreground/70 space-y-1">
+              <li>Student group bulk eSIM discount negotiated</li>
+              <li>Green tariff pilot expanded to two new regions</li>
+              <li>No-deposit onboarding rolled out for families</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+            <h4 className="font-semibold text-accent">How we measure impact</h4>
+            <p className="mt-3 text-sm text-foreground/70">
+              Savings are computed from verified bills and live plan rates, with
+              monthly updates across cohorts. Carbon reduction is estimated from
+              supplier emission factors for the Community Green Tariff.
+            </p>
+          </div>
         </div>
       </div>
     </section>

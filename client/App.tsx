@@ -5,7 +5,8 @@ import { createRoot } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Calculator from "./pages/Calculator";
@@ -32,6 +33,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <NavBar />
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/calculator" element={<Calculator />} />
@@ -54,5 +56,20 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
+
+function ScrollToHash() {
+  const location = useLocation();
+  useEffect(() => {
+    const raw = location.hash || "";
+    if (!raw) return;
+    const id = raw.split(/[?&]/)[0].replace(/^#/, "");
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location.pathname, location.hash]);
+  return null;
+}
 
 createRoot(document.getElementById("root")!).render(<App />);
