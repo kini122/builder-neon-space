@@ -313,30 +313,63 @@ function CommunityImpact() {
               </p>
             </div>
           </div>
+          <div className="mt-6 space-y-4">
+            <h4 className="font-semibold text-accent">This month vs typical market</h4>
+            <div className="space-y-3 text-sm">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-foreground/70">Mobile</span>
+                  <span className="text-accent font-medium">~€18 saved</span>
+                </div>
+                <div className="mt-1 h-2 w-full rounded bg-muted">
+                  <div className="h-2 rounded bg-secondary" style={{ width: "65%" }} />
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-foreground/70">Broadband</span>
+                  <span className="text-accent font-medium">~€14 saved</span>
+                </div>
+                <div className="mt-1 h-2 w-full rounded bg-muted">
+                  <div className="h-2 rounded bg-secondary" style={{ width: "50%" }} />
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-foreground/70">Energy</span>
+                  <span className="text-accent font-medium">8–15% lower</span>
+                </div>
+                <div className="mt-1 h-2 w-full rounded bg-muted">
+                  <div className="h-2 rounded bg-secondary" style={{ width: "40%" }} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
           <h3 className="font-semibold text-accent">
             Where our members are saving
           </h3>
-          <div className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative">
-            <iframe
-              className="absolute inset-0 h-full w-full"
-              src="https://www.google.com/maps?q=London&hl=en&z=12&output=embed"
-              title="Map of London"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          <div
+            className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative"
+            style={{
+              backgroundImage:
+                "url(https://staticmap.openstreetmap.de/staticmap.php?center=51.5074,-0.1278&zoom=12&size=800x600&maptype=mapnik)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            aria-label="Map of London"
+          >
             <div className="absolute inset-0 pointer-events-none">
               {[
                 { left: "20%", top: "40%" },
                 { left: "48%", top: "30%" },
                 { left: "70%", top: "55%" },
               ].map((p, i) => (
-                <span
-                  key={i}
-                  className="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary shadow animate-pulse"
-                  style={p}
-                />
+                <div key={i} className="absolute" style={p}>
+                  <span className="absolute h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/40 animate-ping" />
+                  <span className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary shadow-lg ring-2 ring-white" />
+                </div>
               ))}
             </div>
           </div>
