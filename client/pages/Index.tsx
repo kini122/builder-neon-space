@@ -318,17 +318,15 @@ function CommunityImpact() {
           <h3 className="font-semibold text-accent">
             Where our members are saving
           </h3>
-          <div
-            className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border"
-            style={{
-              backgroundImage:
-                "url(https://staticmap.openstreetmap.de/staticmap.php?center=51.5074,-0.1278&zoom=12&size=800x600&maptype=mapnik&markers=51.5074,-0.1278,lightblue1)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            aria-label="Map of London"
-          >
-            <div className="relative h-full w-full">
+          <div className="mt-4 aspect-[4/3] overflow-hidden rounded-xl border border-border relative">
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.google.com/maps?q=London&hl=en&z=12&output=embed"
+              title="Map of London"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="absolute inset-0 pointer-events-none">
               {[
                 { left: "20%", top: "40%" },
                 { left: "48%", top: "30%" },
@@ -345,6 +343,14 @@ function CommunityImpact() {
           <p className="mt-3 text-sm text-foreground/70">
             Hotspots across Ireland & UK. More communities joining every week.
           </p>
+          <div className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
+            <div className="text-foreground/60">Average monthly saving</div>
+            <div className="text-accent font-medium">€12–€25 mobile, €10–€18 broadband</div>
+            <div className="text-foreground/60">Green energy mix</div>
+            <div className="text-accent font-medium">100% renewable tariff</div>
+            <div className="text-foreground/60">Deposit required</div>
+            <div className="text-accent font-medium">No</div>
+          </div>
         </div>
       </div>
       <div className="container pb-16">
