@@ -345,6 +345,33 @@ function CommunityImpact() {
               </div>
             </div>
           </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-border bg-muted/40 p-4">
+              <h5 className="text-accent font-semibold">What this means</h5>
+              <ul className="mt-2 list-disc pl-5 text-sm text-foreground/70 space-y-1">
+                <li>Lower baseline costs across common plans</li>
+                <li>No deposit to join, flexible add-ons</li>
+                <li>Backed by green energy commitments</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-border bg-muted/40 p-4">
+              <h5 className="text-accent font-semibold">Since last month</h5>
+              <div className="mt-2 grid grid-cols-2 gap-2 text-sm">
+                <div className="text-foreground/60">Total saved</div>
+                <div className="text-secondary font-medium">+4%</div>
+                <div className="text-foreground/60">CO₂ reduced</div>
+                <div className="text-secondary font-medium">+2%</div>
+                <div className="text-foreground/60">Members</div>
+                <div className="text-secondary font-medium">+180</div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a href="/calculator" className="inline-flex items-center rounded-lg bg-primary px-5 py-2 text-white shadow-brand hover:-translate-y-0.5 transition">
+              Estimate your savings
+            </a>
+            <a href="#impact-methodology" className="text-sm text-accent underline underline-offset-4">Methodology</a>
+          </div>
         </div>
         <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
           <h3 className="font-semibold text-accent">
@@ -367,8 +394,8 @@ function CommunityImpact() {
                 { left: "70%", top: "55%" },
               ].map((p, i) => (
                 <div key={i} className="absolute" style={p}>
-                  <span className="absolute h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/40 animate-ping" />
-                  <span className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary shadow-lg ring-2 ring-white" />
+                  <span className="absolute h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/40 animate-ping" />
+                  <span className="absolute h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary shadow-xl ring-4 ring-white/80 drop-shadow" />
                 </div>
               ))}
             </div>
