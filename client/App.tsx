@@ -60,13 +60,15 @@ const App = () => (
 function ScrollToHash() {
   const location = useLocation();
   useEffect(() => {
-    if (location.hash) {
-      const el = document.querySelector(location.hash);
-      if (el) {
-        (el as HTMLElement).scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+    const raw = location.hash || "";
+    if (!raw) return;
+    const id = raw.split(/[?&]/)[0].replace(/^#/, "");
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [location]);
+  }, [location.pathname, location.hash]);
   return null;
 }
 
